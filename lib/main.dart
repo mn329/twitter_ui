@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:twitter_ui/theme/app_theme.dart';
 import 'package:twitter_ui/view/home_view.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const TwitterApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class TwitterApp extends StatelessWidget {
+  const TwitterApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(),
+      title: 'Twitter UI',
+      theme: AppTheme.lightTheme,
+      home: const HomePage(),
     );
   }
 }
